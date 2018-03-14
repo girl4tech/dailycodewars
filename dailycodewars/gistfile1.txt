@@ -1,0 +1,63 @@
+date:
+3/12/18
+
+title:
+scrolling text
+
+challenge link: 
+https://www.codewars.com/kata/5a995c2aba1bb57f660001fd
+
+solution:
+function scrollingText(text){
+  text = text.toUpperCase();
+  var word = [];
+  for (i=0; i<text.length; i++){
+  word.push(text)
+  text = text.slice(1)+text[0]
+ }
+ return word;
+}
+
+date:
+3/13/18
+
+title:
+keep up the hoop
+
+challenge link: 
+https://www.codewars.com/kata/55cb632c1a5d7b3ad0000145
+
+solution:
+function hoopCount(n){
+  if(n >= 10){
+    return "Great, now move on to tricks";
+  }else{
+    return "Keep at it until you get it";
+  }
+}
+
+date:
+3/14/18
+
+title:
+spanish conjugator
+
+challenge link: 
+https://www.codewars.com/kata/5a81b78d4a6b344638000183
+
+solution:
+function conjugate(verb){
+  var root = verb.slice(0,-2)
+  var infinitive = verb.slice(-2)
+  var conjugated = {};
+  if (infinitive === 'ar'){
+    conjugated [verb] = [root + 'o', root + 'as', root + 'a', root + 'amos', root + 'áis', root + 'an'] 
+  }
+  if (infinitive === 'er'){
+    conjugated [verb] =  [root + 'o', root + 'es', root + 'e', root + 'emos', root + 'éis', root + 'en']
+  }
+    if (infinitive === 'ir'){
+    conjugated [verb] =  [root + 'o', root + 'es', root + 'e', root + 'imos', root + 'ís', root + 'en']
+  }
+  return conjugated; // Un objeto con el verbo conjugado :)
+}
