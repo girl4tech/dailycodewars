@@ -61,3 +61,32 @@ function conjugate(verb){
   }
   return conjugated; // Un objeto con el verbo conjugado :)
 }
+
+
+date:
+3/15/18
+
+title:
+reversed strings
+
+challenge link: 
+https://www.codewars.com/kata/5168bb5dfe9a00b126000018
+
+Solution:
+function solution(str){
+ return str.split("").reverse().join("")
+}
+
+date:
+3/16/18
+
+title:
+convert string to a number
+
+challenge link: 
+https://www.codewars.com/kata/544675c6f971f7399a000e79
+
+Solution:
+var stringToNumber = function(str){
+  return Number(str)
+}
