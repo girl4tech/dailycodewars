@@ -209,3 +209,20 @@ function solution(number){
   return sum;
 }
 
+Date:
+3/31/18
+
+Title:
+Where are my anagrams at?
+
+Challenge link:
+https://www.codewars.com/kata/523a86aa4230ebb5420001e1
+
+Solution:
+function anagrams(word, words) {
+  var sortedWord = word.split("").sort().join("");
+  return words.filter(function(e){
+    return sortedWord === e.split("").sort().join("");
+  });
+}  
+
