@@ -155,4 +155,57 @@ function solve(x, y) {
 
 }
 
+Date:
+3/28/18
+
+Title:
+List drills longest word
+
+Challenge link:
+https://www.codewars.com/kata/thinkful-list-drills-longest-word
+
+Solution:
+function longest(words) {
+  var winner = 0;
+  for(let i = 0; i < words.length; i++) {
+    if(words[i].length > winner) {
+      winner = words[i].length;
+    }
+    }
+  return winner;  
+     
+}
+
+Date:
+3/29/18
+
+Title:
+Line task area or perimeter
+
+Challenge link:
+https://www.codewars.com/kata/one-line-task-area-or-perimeter
+
+Solution:
+areaOrPerimeter=(l,w)=>l-w?(l+w)*2:l*w
+
+Date
+3/30/18
+
+Title:
+multiples of 3 or 5
+
+Challenge link:
+https://www.codewars.com/kata/multiples-of-3-or-5
+
+Solution:
+function solution(number){
+  var sum = 0;
+  
+  for(var i = 1;i< number; i++){
+    if(i % 3 == 0 || i % 5 == 0){
+      sum += i
+    }
+  }
+  return sum;
+}
 
