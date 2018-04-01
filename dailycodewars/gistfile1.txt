@@ -225,4 +225,3 @@ function anagrams(word, words) {
     return sortedWord === e.split("").sort().join("");
   });
 }  
-
