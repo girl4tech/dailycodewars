@@ -225,3 +225,12 @@ function anagrams(word, words) {
     return sortedWord === e.split("").sort().join("");
   });
 }  
+
+date:
+4/1/18
+
+title:
+
+solution:
+
+challenge:
