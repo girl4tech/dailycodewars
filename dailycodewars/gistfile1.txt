@@ -274,28 +274,117 @@ Date:
 4/3/2018
 
 title:
+find an area
 
+challenge:
+https://www.codewars.com/kata/find-an-area
 
 Solution:
+function findArea(points) {
+  var result = 0;
+  // loop through the points
+  for (let i = 0; i < points.length - 1; i++) {
+    let b1 = points[i]['Y'];
+    let b2 = points[i + 1]['Y'];
+    let h = points[i + 1]['X'] - points[i]['X'];
+    if (h < 0)
+      h * -1;
+    result = result + h * ((b1 + b2) / 2);
+  }
+  
+  return result;
+}
 
 date:
 4/4/2018
 
 title:
+Multiply characters
+
+challenge:
+https://www.codewars.com/kata/multiply-characters
 
 solution:
+function spam(number){
+  return new Array(number + 1).join("hue");
+}
 
 date:
 4/5/18
 
 title:
+find cracker
+
+challenge:
+https://www.codewars.com/kata/find-cracker
 
 solution:
+function findHack(arr) {
+  var result = [];
+  
+  for(key in arr) {
+    var sum = 0;
+    var bonus = true;
+    for(key2 in arr[key][2]) {
+        var grade = arr[key][2][key2];
+        switch(grade){
+            case "A": 
+                sum += 30;  
+                break;
+            case "B": 
+                sum += 20;
+                break;
+            case "C": 
+                sum += 10;
+                bonus = false;
+                break;
+            case "D": 
+                sum += 5;
+                bonus = false;
+                break;
+            default:  
+                sum += 0;  
+                bonus = false;
+                break;
+        }
+    }
+    if( bonus && arr[key][2].length >= 5 ) sum += 20;
+    if( sum != arr[key][1] ) result.push(arr[key][0]);
+  }
+  
+  return result;
+}
 
 date:
 4/6/18
 
 title:
+balance the tree
+
+challenge:
+https://www.codewars.com/kata/balance-the-tree
 
 solution:
+function isBalanced(root){
+  let maxDist = -1;
+    let minDist = -1;
+    let curr = 0;
+    function mesDist(node) {
+        if (!(node.left === null || node.left === undefined)) {
+            curr += 1;
+            mesDist(node.left);
+        }
+        if (!(node.right === null || node.right === undefined)) {
+            curr += 1;
+            mesDist(node.right);
+        }
+        if ((node.left === null || node.left === undefined)&& (node.right === null || node.right === undefined)) {
+        if (minDist < 0 || curr < minDist) minDist = curr;
+        if (curr > maxDist) maxDist = curr;
+        }
+        curr-=1;
+    }
+    mesDist(root);
+    return maxDist <= minDist+1;
+}
 
