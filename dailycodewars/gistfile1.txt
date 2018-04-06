@@ -230,24 +230,51 @@ date:
 4/1/18
 
 title:
-
-solution:
+Tribonacci
 
 challenge:
+https://www.codewars.com/kata/tribonacci-sequence
+
+solution:
+function tribonacci(signature,n){  
+  for (var i = 0; i < n-3; i++) { // iterate n times
+    signature.push(signature[i] + signature[i+1] + signature[i+2]); // add last 3 array items and push to trib
+  }
+  return signature.slice(0, n); //return trib - length of n
+}
 
 date:
 4/2/18
 
 title:
-
-solution:
+How many unique consonants
 
 challenge:
+https://www.codewars.com/kata/how-many-unique-consonants
+
+solution:
+const countConsonants = (str) => {
+  str = str.toLowerCase();
+  const consonants = {b:1,c:1,d:1,f:1,g:1,h:1,j:1,k:1,l:1,m:1,n:1,p:1,q:1,r:1,s:1,t:1,v:1,w:1,x:1,y:1,z:1}
+  consObj = {}
+  for (let i = 0; i < str.length; i++) {
+    if (consonants[str[i]]) {
+      consObj[str[i]] = 1
+    }
+  }
+  return Object.keys(consObj).length;
+}
+
+console.log(countConsonants('daaadddy')); //should return 2
+console.log(countConsonants('oYGLB')) //should return 4
+console.log(countConsonants('sillystring')) //should return 7
+countConsonants('abcdefghi.jklmn123opqr"stuvwxyz0');
 
 Date:
 4/3/2018
 
 title:
+
 
 Solution:
 
