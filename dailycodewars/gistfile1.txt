@@ -392,16 +392,41 @@ date:
 4/8/18
 
 title:
+frog jumping
 
 challenge:
+https://www.codewars.com/kata/frog-jumping
 
 solution:
+function solution(array) {
+  var steps = 0, pos = 0;
+  do{
+    if (!array[pos])
+      return -1;
+    ++steps;
+    var jump = array[pos];
+    array[pos] = 0;
+    pos += jump;
+  } while (pos >= 0 && pos < array.length);
+  return steps
+}
 
 date:
 4/9/18
 
 title:
+compounds nouns and adjectives test
 
 challenge:
+https://www.codewars.com/kata/compound-nouns-common-nouns-and-adjectives-test
 
 solution:
+function part(word) {
+  if (!word) return "neither";
+  if (nouns.includes(word)) return "common";
+  if (adjectives.includes(word)) return "adjective";
+  for (let i = word.length-1; i > 0; i--) {
+    if ((adjectives.includes(word.slice(0, i)) || nouns.includes(word.slice(0, i))) && nouns.includes(word.slice(i))) return "compound"
+  }
+  return "neither";
+}
