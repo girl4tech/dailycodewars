@@ -430,3 +430,13 @@ function part(word) {
   }
   return "neither";
 }
+
+date:
+4/12/18
+
+title:
+
+solution:
+
+challenge:
+
