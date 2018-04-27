@@ -496,3 +496,12 @@ title:
 challenge:
 
 solution:
+
+date:
+
+title:
+
+challenge:
+
+solution:
+
